@@ -25,6 +25,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()
 
@@ -43,3 +44,13 @@ let g:AutoPairsFlyMode = 1
 " Configuration Numbers
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
+
+" stop using arrow keys!
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
