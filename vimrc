@@ -9,6 +9,31 @@ set smartindent " Automatic indent in new line
 set showcmd " display incomplete commands
 set hlsearch
 
+" set leader key to space
+let mapleader = " "
+
+" --- general leader key binding ---
+" quit by <space>q
+nmap <silent> <leader>q :q<CR>
+" force quit by <space>qq
+nmap <silent> <leader>qq :q!<CR>
+" close all by <space>qa
+nmap <silent> <leader>qa :qa<CR>
+" save by <space>w
+nmap <silent> <leader>w :w<CR>
+" save and quit by <space>wq
+nmap <silent> <leader>wq :wq<CR>
+" next buffer by ]
+map ] :bn<CR>
+" previous buffer by [
+map [ :bp<CR>
+" delete buffer and keep buffer layout by <space>d
+map <silent> <leader>d :BD<CR>
+" switch pane by <space>w arrow
+nnoremap <leader>w <C-W>
+" close all buufer by <space>D
+map <silent> <leader>D :bufdo BD<CR>
+
 "set smartindent
 filetype plugin indent on
 
@@ -26,6 +51,9 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ivalkeen/vim-ctrlp-tjump'
 
 call vundle#end()
 
@@ -54,3 +82,4 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
